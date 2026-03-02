@@ -1,0 +1,75 @@
+# Task 2 - Shopping System Pseudocode
+
+START
+
+Create product list:
+    Bread = 20
+    Milk = 35
+    Eggs = 60
+
+Create empty cart
+Set total = 0
+
+LOOP
+
+    PRINT Menu:
+    1- Show Products
+    2- Add to Cart
+    3- Remove from Cart
+    4- View Cart
+    5- Checkout
+    6- Exit
+
+    Read choice
+
+    IF choice == 1 THEN
+        PRINT product list
+
+    ELSEIF choice == 2 THEN
+        Read product name
+        Read quantity
+        IF product exists AND quantity > 0 THEN
+            Add product to cart
+        ELSE
+            PRINT "Invalid product or quantity"
+        ENDIF
+
+    ELSEIF choice == 3 THEN
+        Read product name
+        IF product in cart THEN
+            Remove product
+        ELSE
+            PRINT "Product not in cart"
+        ENDIF
+
+    ELSEIF choice == 4 THEN
+        Calculate total
+        PRINT cart items and total
+
+    ELSEIF choice == 5 THEN
+        Calculate total
+        IF cart empty THEN
+            PRINT "Cart is empty"
+        ELSE
+            Read payment amount
+            IF payment >= total THEN
+                change = payment - total
+                PRINT "Payment successful"
+                PRINT "Change = ", change
+                Empty cart
+            ELSE
+                PRINT "Not enough payment"
+            ENDIF
+        ENDIF
+
+    ELSEIF choice == 6 THEN
+        PRINT "Goodbye"
+        BREAK
+
+    ELSE
+        PRINT "Invalid choice"
+    ENDIF
+
+ENDLOOP
+
+END

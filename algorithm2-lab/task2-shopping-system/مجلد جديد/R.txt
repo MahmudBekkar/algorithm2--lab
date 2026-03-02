@@ -1,0 +1,15 @@
+# Task 2 - Shopping System
+
+## Description
+This system simulates a simple shopping cart.
+
+Features:
+- Show products
+- Add items to cart
+- Remove items
+- View total price
+- Checkout with payment validation
+- Exit program
+
+The algorithm uses loops and conditional statements.
+Flowcharts were created using Graphviz and Mermaid.

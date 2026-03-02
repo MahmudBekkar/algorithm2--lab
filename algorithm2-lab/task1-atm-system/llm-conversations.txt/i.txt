@@ -1,0 +1,9 @@
+I asked the LLM to generate an ATM withdrawal system algorithm.
+The system includes:
+- PIN verification (3 attempts)
+- Balance check
+- Withdrawal amount validation
+- Daily limit check
+- Option to repeat transaction
+
+The LLM generated pseudocode and converted it into Graphviz and Mermaid flowcharts.

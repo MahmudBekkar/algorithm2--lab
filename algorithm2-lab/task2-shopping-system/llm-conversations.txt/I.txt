@@ -1,0 +1,7 @@
+I asked the LLM to create a shopping system algorithm.
+The system includes:
+- Product list
+- Add/remove items
+- View cart
+- Checkout with payment validation
+The LLM generated pseudocode and flowcharts in Graphviz and Mermaid.

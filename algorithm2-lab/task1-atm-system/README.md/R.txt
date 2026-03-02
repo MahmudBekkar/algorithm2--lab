@@ -1,0 +1,31 @@
+# Task 1 - ATM Cash Withdrawal System
+
+## System Description
+This project simulates an ATM cash withdrawal system.
+
+The system includes:
+- PIN verification (maximum 3 attempts)
+- Card blocking after 3 incorrect attempts
+- Balance checking
+- Withdrawal amount validation (must be multiple of 20 TL)
+- Daily withdrawal limit check
+- Option to perform another transaction
+
+## How It Works
+1. The user enters a PIN.
+2. If the PIN is correct, the system shows the account balance.
+3. The user enters the withdrawal amount.
+4. The system checks:
+   - If the balance is sufficient
+   - If the amount is a multiple of 20
+   - If the daily limit is not exceeded
+5. If all conditions are correct, cash is dispensed and a receipt is printed.
+6. The user can choose to perform another transaction or exit.
+
+## Files Included
+- pseudocode.md → Algorithm written in plain English
+- flowchart.dot → Graphviz flowchart code
+- flowchart.dot.png → Exported Graphviz diagram
+- flowchart.mmd → Mermaid flowchart code
+- flowchart.mermaid.png → Exported Mermaid diagram
+- llm-conversations.txt → LLM interaction log

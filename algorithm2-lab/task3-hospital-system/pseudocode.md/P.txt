@@ -1,0 +1,64 @@
+# Task 3 - Hospital System (Pseudocode)
+
+START
+
+Create empty list Patients
+
+LOOP
+    PRINT Menu:
+    1- Register Patient
+    2- Create Appointment
+    3- Search Patient
+    4- Discharge Patient
+    5- Exit
+
+    READ choice
+
+    IF choice == 1 THEN
+        READ patientID, name, age, department
+        IF patientID already exists in Patients THEN
+            PRINT "Error: ID already exists"
+        ELSE
+            Add new patient:
+              (ID=patientID, Name=name, Age=age, Dept=department,
+               Status="Active", Appointments=empty)
+            PRINT "Patient registered"
+        ENDIF
+
+    ELSEIF choice == 2 THEN
+        READ patientID, doctorName, dateTime
+        IF patientID exists AND Status == "Active" THEN
+            Add appointment (doctorName, dateTime) to that patient
+            PRINT "Appointment saved"
+        ELSE
+            PRINT "Error: patient not found or discharged"
+        ENDIF
+
+    ELSEIF choice == 3 THEN
+        READ patientID
+        IF patientID exists THEN
+            PRINT patient details + appointments
+        ELSE
+            PRINT "Not found"
+        ENDIF
+
+    ELSEIF choice == 4 THEN
+        READ patientID
+        IF patientID exists AND Status == "Active" THEN
+            Set Status = "Discharged"
+            PRINT "Patient discharged"
+        ELSE
+            PRINT "Error: patient not found or already discharged"
+        ENDIF
+
+    ELSEIF choice == 5 THEN
+        PRINT "Goodbye"
+        BREAK
+
+    ELSE
+        PRINT "Invalid choice"
+    ENDIF
+
+ENDLOOP
+
+END

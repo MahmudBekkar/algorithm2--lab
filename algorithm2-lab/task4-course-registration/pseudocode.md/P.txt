@@ -1,0 +1,84 @@
+# Task 4 - Course Registration System (Pseudocode)
+
+START
+
+Create availableCourses list
+Each course has:
+    code, name, credits, capacity, enrolledCount, timeSlot, prerequisite
+
+Create student data:
+    completedCourses = ["YMT111"]
+    registeredCourses = empty list
+    maxCredits = 18
+
+READ studentID and password
+IF login incorrect THEN
+    PRINT "Login failed"
+    END
+ENDIF
+
+LOOP
+
+    PRINT Menu:
+    1- View Available Courses
+    2- Register Course
+    3- Drop Course
+    4- View My Courses
+    5- Exit
+
+    READ choice
+
+    IF choice == 1 THEN
+        PRINT availableCourses
+
+    ELSEIF choice == 2 THEN
+        READ courseCode
+        IF course not found THEN
+            PRINT "Course not found"
+
+        ELSEIF already registered THEN
+            PRINT "Already registered"
+
+        ELSEIF course is full THEN
+            PRINT "Course full"
+
+        ELSEIF prerequisite not completed THEN
+            PRINT "Missing prerequisite"
+
+        ELSEIF schedule conflict exists THEN
+            PRINT "Schedule conflict"
+
+        ELSEIF totalCredits + courseCredits > maxCredits THEN
+            PRINT "Credit limit exceeded"
+
+        ELSE
+            Add course to registeredCourses
+            Increase enrolledCount
+            PRINT "Registration successful"
+        ENDIF
+
+    ELSEIF choice == 3 THEN
+        READ courseCode
+        IF course in registeredCourses THEN
+            Remove course
+            Decrease enrolledCount
+            PRINT "Course dropped"
+        ELSE
+            PRINT "Not registered in this course"
+        ENDIF
+
+    ELSEIF choice == 4 THEN
+        PRINT registeredCourses
+        PRINT total credits
+
+    ELSEIF choice == 5 THEN
+        PRINT "Goodbye"
+        BREAK
+
+    ELSE
+        PRINT "Invalid choice"
+    ENDIF
+
+ENDLOOP
+
+END

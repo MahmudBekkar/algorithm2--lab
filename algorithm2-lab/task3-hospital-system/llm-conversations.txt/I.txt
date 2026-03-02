@@ -1,0 +1,4 @@
+User: I need a hospital system for lab: register patient, appointment, search, discharge.
+LLM: Use a menu loop and store patients by unique ID with a status field (Active/Discharged).
+User: Create flowcharts in Graphviz DOT and Mermaid.
+LLM: Built DOT and Mermaid with decision nodes for ID exists, found, and active status.

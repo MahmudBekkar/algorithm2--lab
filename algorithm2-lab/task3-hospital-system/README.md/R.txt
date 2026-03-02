@@ -1,0 +1,13 @@
+# Task 3 - Hospital System
+
+## Description
+A simple hospital management simulation using a menu:
+- Register patient (unique ID)
+- Create appointment (only if patient exists and is Active)
+- Search patient
+- Discharge patient
+- Exit
+
+## Notes
+- Each patient has ID, name, age, department, status, and appointments list.
+- Validations prevent duplicate IDs and prevent appointments for discharged patients.

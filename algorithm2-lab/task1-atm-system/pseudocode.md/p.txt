@@ -1,0 +1,60 @@
+# ATM Cash Withdrawal System - Pseudocode
+
+START
+
+Set storedPIN = "1234"
+Set balance = 2500
+Set dailyLimit = 5000
+Set withdrawnToday = 1200
+
+Set attempts = 0
+
+WHILE attempts < 3
+    Read enteredPIN
+    IF enteredPIN == storedPIN THEN
+        PRINT "PIN correct"
+        BREAK
+    ELSE
+        attempts = attempts + 1
+        PRINT "Wrong PIN"
+    ENDIF
+ENDWHILE
+
+IF attempts == 3 THEN
+    PRINT "Card blocked"
+    END
+ENDIF
+
+LOOP
+    PRINT "Current balance = ", balance
+    PRINT "Withdrawn today = ", withdrawnToday
+
+    Read amount
+
+    IF amount > balance THEN
+        PRINT "Insufficient balance"
+
+    ELSEIF amount MOD 20 != 0 THEN
+        PRINT "Amount must be multiple of 20"
+
+    ELSEIF withdrawnToday + amount > dailyLimit THEN
+        PRINT "Daily limit exceeded"
+
+    ELSE
+        balance = balance - amount
+        withdrawnToday = withdrawnToday + amount
+        PRINT "Cash dispensed"
+        PRINT "Receipt printed"
+        PRINT "New balance = ", balance
+    ENDIF
+
+    Read again (YES/NO)
+
+    IF again == "NO" THEN
+        PRINT "Goodbye"
+        BREAK
+    ENDIF
+
+ENDLOOP
+
+END

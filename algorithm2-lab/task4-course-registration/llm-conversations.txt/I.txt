@@ -1,0 +1,7 @@
+I asked the LLM to generate a course registration system.
+The system includes:
+- Login
+- Course registration with prerequisite, capacity, credit and conflict checks
+- Drop course
+- View registered courses
+The LLM generated pseudocode and flowcharts.

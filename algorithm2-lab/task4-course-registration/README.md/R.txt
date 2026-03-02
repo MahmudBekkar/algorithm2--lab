@@ -1,0 +1,15 @@
+# Task 4 - Course Registration System
+
+## Description
+This system simulates university course registration.
+
+Features:
+- Student login
+- View available courses
+- Register course with multiple validation checks
+- Drop course
+- View registered courses and total credits
+- Exit
+
+The algorithm uses loops and conditional statements.
+Flowcharts were created using Graphviz and Mermaid.
